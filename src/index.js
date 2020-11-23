@@ -1,10 +1,10 @@
 // Dom Selectors
 const input = document.querySelector('.todo-input');
-const notCompleted = document.querySelector('.notCompleted')
-const completed = document.querySelectorAll('.completed')
+const notCompleted = document.querySelector('.notCompleted');
+const completed = document.querySelectorAll('.completed');
 const addButton = document.querySelector('.addButton');
-const editButton = document.querySelector('.editButton')
-const removeButton = document.querySelector('.removeButton')
+const editButton = document.querySelector('.editButton');
+const removeButton = document.querySelector('.removeButton');
 // Event listeners
 addButton.addEventListener('click', addItem);
 // editButton.addEventListener('click', editItem);
@@ -12,11 +12,16 @@ addButton.addEventListener('click', addItem);
 
 function addItem(e) {
   e.preventDefault();
-  console.log("You clicked me!!!!")
-  const item = document.createElement("div");
-  item.classList.add("item");
-  const paragraph = document.createElement('p')
+  console.log('You clicked me!!!!');
+  const item = document.createElement('div');
+  item.classList.add('item');
+  const check = document.createElement('INPUT');
+  check.setAttribute('type', 'checkbox');
+
+  const paragraph = document.createElement('p');
   paragraph.innerText = input.value;
+  paragraph.appendChild(check);
+
   item.appendChild(paragraph);
-  notCompleted.appendChild(item)
-} 
+  notCompleted.appendChild(item);
+}
