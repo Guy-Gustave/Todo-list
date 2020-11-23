@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo-list</title>
-  <link rel="stylesheet" href="main.css"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-list</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo list</h1>
+      <div class="todo">
+        <div class="todoForm">
+          <input type="text" class="todo-input" placeholder="add todo" />
+          <button class="addButton">Add</button>
+        </div>
 
-</head>
-<body>
-  <div class="container">
-    <h1>Todo list</h1>
-    <div class="todo">
-      <div class="todoForm">
-        <input type="text" placeholder="add todo">
-        <button class="addButton">Add</button>
+        <div class="todoContent">
+          <div class="items">
+            <ol class="notCompleted">
+              <h3>Not Completed</h3>
+              <div class="item">
+                <input type="checkbox" id="itemList" name="itemList" value="" />
+                <p>Item1</p>
+                <button class="editButton">Edit</button>
+                <button class="removeButton">Remove</button>
+              </div>
+            </ol>
+            <ol class="Completed">
+              <h3>Completed</h3>
+            </ol>
+          </div>
+        </div>
       </div>
-      <div class="todoContent">
-        <input type="checkbox" id="itemList name="itemList" value="">
-        <p>Item1</p>
-        <button class="editButton">Edit</button>
-        <Button class="removeButton">Remove</Button>
-      </div>
-      
     </div>
-  </div>
-  <script src="main.js"></script>
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>

@@ -1,1 +1,1 @@
-console.log("hello come and see a todo-list!");
+(()=>{const e=document.querySelector(".todo-input"),t=document.querySelector(".notCompleted"),o=(document.querySelectorAll(".completed"),document.querySelector(".addButton"));document.querySelector(".editButton"),document.querySelector(".removeButton"),o.addEventListener("click",(function(o){o.preventDefault(),console.log("You clicked me!!!!");const n=document.createElement("div");n.classList.add("item");const c=document.createElement("p");c.innerText=e.value,n.appendChild(c),t.appendChild(n)}))})();
