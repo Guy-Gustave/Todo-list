@@ -92,3 +92,14 @@ input[type='checkbox'] {
   margin: 5px 0;
   padding: 20px;
 }
+
+.todo {
+  font-size: 30px;
+  color: aqua;
+}
+
+.done {
+  color: gray;
+  text-decoration: line-through;
+  opacity: 50%;
+}
