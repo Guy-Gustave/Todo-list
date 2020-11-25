@@ -11,13 +11,17 @@ const removeButton = document.querySelector('.removeButton');
 // Event listeners
 addButton.addEventListener('click', addItem);
 // editButton.addEventListener('click', editItem);
-// removeButton.addEventListener('click', removeItem);
+removeButton.addEventListener('click', removeItem);
+
+function clearInputs() {
+  document.querySelector('.todo-input').value = '';
+}
 
 function addItem(e) {
   e.preventDefault();
-  console.log('You clicked me!!!!');
   // inputs[2].checked
   const item = document.createElement('div');
+  document.body.appendChild(item);
   item.classList.add('item');
   const check = document.createElement('INPUT');
   check.setAttribute('type', 'checkbox');
@@ -25,7 +29,7 @@ function addItem(e) {
   edit.classList.add('editButton');
   edit.textContent = 'Edit';
   const del = document.createElement('button');
-  del.textContent = 'Delete';
+  del.textContent = 'Remove';
   del.classList.add('removeButton');
 
   const paragraph = document.createElement('p');
@@ -35,4 +39,10 @@ function addItem(e) {
   item.appendChild(edit);
   item.appendChild(del);
   notCompleted.appendChild(item);
+  clearInputs();
+}
+
+function removeItem() {
+  const item = document.querySelector('.item');
+  item.remove();
 }
