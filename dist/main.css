@@ -44,20 +44,21 @@ h1 {
   width: 350px;
   border: none;
   outline: none;
-  border-radius: 2px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 10px;
   margin-right: 10px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .add-button {
   background-color: #0000ff;
+  margin-left: 9rem;
   color: #fff;
   border: none;
   outline: none;
-  border-radius: 2px;
-  padding: 20px;
-  font-size: 2rem;
+  border-radius: 8px;
+  padding: 10px 30px;
+  font-size: 1.5rem;
 }
 
 .todo-items {
@@ -67,6 +68,7 @@ h1 {
 .item {
   background-color: #fff;
   padding: 10px;
+  border: 1px solid gray;
   font-size: 1.1rem;
 }
 
@@ -98,4 +100,27 @@ h1 {
 
 .checked { 
   text-decoration: line-through;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+label {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.field {
+  width: 350px;
+  height: 40px;
+  font-size: 1.5rem;
+}
+
+#description {
+  font-size: 1.5rem;
+  height: 70px;
+  width: 350px;
 }

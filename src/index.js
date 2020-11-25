@@ -1,19 +1,25 @@
 const todoForm = document.querySelector('.todo-form');
-const todoInput = document.querySelector('.todo-input');
+const todoTitle = document.getElementById('title');
+const todoDescription = document.getElementById('description');
+const todoPriority = document.getElementById('priority');
+const todoDate = document.getElementById('date');
 const todoItemsList = document.querySelector('.todo-items');
 
 let todos = [];
 
 todoForm.addEventListener('submit', function (event) {
   event.preventDefault();
-  addTodo(todoInput.value);
+  addTodo(todoTitle.value);
+  addTodo(todoDescription.value);
+  addTodo(todoPriority.value);
+  addTodo(todoDate.value);
 });
 
 function addTodo(item) {
   if (item !== '') {
     const todo = {
       id: Date.now(),
-      name: item,
+      title: item,
       completed: false,
     };
 
@@ -37,7 +43,10 @@ function renderTodos(todos) {
 
     li.innerHTML = `
       <input type="checkbox" class="checkbox" ${checked}>
-      ${item.name}
+      ${todoTitle.value}
+      ${todoDescription.value}
+      ${todoPriority.value}
+      ${todoDate.value}
       <button class="delete-button">X</button>
     `;
     todoItemsList.append(li);
