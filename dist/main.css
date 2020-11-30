@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
-
+/* common styles */
 * {
   padding: 0;
   margin: 0;
@@ -10,58 +9,27 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background: linear-gradient(#2f47b4, #DC281E);
-  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(#F00000, #DC281E);
+  font-family: sans-serif;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: #5f8f44;
+  background-color: #73E831;
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: none; /* get rid of bullet points on side of list items */
 }
 
+/* common style ends */
+
+/* container */
 .container {
-  display: flex;
-  flex-flow: row;
-  /* background-color: #111; */
-  width: 90%;
-  justify-content: space-around;
-
-}
-
-.projects {
-  margin-top: 5rem;
+  min-width: 700px;
   display: flex;
   flex-direction: column;
-}
-
-h2 {
-  font-size: 3.5rem;
-  color: #fff;
-  font-weight: 700;
-  padding: 2rem 1rem;
-}
-
-#project-title {
-  width: 350px;
-  height: 40px;
-  font-size: 1.5rem;
-  padding-left: 10px;
-}
-
-.addButton {
-  padding: 6px 30px;
-  font-size: 1.5rem;
-}
-
-.todos {
-  /* min-width: 40%; */
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   padding: 20px;
 }
 
@@ -70,40 +38,49 @@ h1 {
   font-size: 3rem;
 }
 
+/* todo-form */
+
 .todo-form {
-  margin: 10px 0px;
+  display: flex;
+  margin: 40px 0px;
 }
 
-.todo-input {
-  width: 350px;
+.todo-input,
+.description,
+.priority,
+.date {
+  width: 250px;
   border: none;
   outline: none;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 10px;
   margin-right: 10px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .add-button {
   background-color: #0000ff;
-  margin-left: 9rem;
   color: #fff;
   border: none;
   outline: none;
-  border-radius: 8px;
-  padding: 10px 30px;
-  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 1.2rem;
 }
 
+/* todo-form style ends */
+
+/* todo-items */
 .todo-items {
   min-width: 350px;
 }
 
+/* each li with class="item" */
 .item {
   background-color: #fff;
   padding: 10px;
-  border: 1px solid gray;
   font-size: 1.1rem;
+  border-bottom: 1px solid rgb(160, 147, 147);
 }
 
 .item:first-child {
@@ -115,6 +92,8 @@ h1 {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
+
+/* item style end */
 
 .checkbox {
   margin-right: 10px;
@@ -132,29 +111,12 @@ h1 {
   font-weight: 550;
 }
 
+/* applied when the todo item is checked */
 .checked { 
   text-decoration: line-through;
+  background-color: rgb(157, 204, 86);
 }
 
-.form-input {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
+/* todo-items style ends */
 
-label {
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-.field {
-  width: 350px;
-  height: 40px;
-  font-size: 1.5rem;
-}
-
-#description {
-  font-size: 1.5rem;
-  height: 70px;
-  width: 350px;
-}
+/* container style ends */
